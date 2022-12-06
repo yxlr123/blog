@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Markdown 基础语法</title>
+    <url>/post/8513d0f8.html</url>
+    <content><![CDATA[<h2 id="1-什么是Markdown">1.什么是Markdown</h2>
+<blockquote>
+<p><code>Markdown</code>是一种轻量标记语言,通过简单的语法，使普通文本具有一定的格式。文件后缀名一般为<code>.md</code></p>
+</blockquote>
+<blockquote>
+<p><strong>注意</strong>：用到的符号必须在英文状态下输入才会生效</p>
+</blockquote>
+<h1>基础用法</h1>
+<hr>
+<h2 id="2-标题">2.标题</h2>
+<p>有两种写法：</p>
+<h3 id="方法一：在文字下方输入-或-构成的线">方法一：在文字下方输入<code>-</code>或<code>=</code>构成的线:</h3>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important">我展示的是一级标题
+<span class="token punctuation">=================</span></span>
+
+<span class="token title important">我展示的是二级标题
+<span class="token punctuation">-----------------</span></span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/62fb3293b1633c3ed4a3783127f9d02d.jpeg" alt="方法一"></p>
+<h3 id="方法二：在文字前面插入-号，内容前面要有空格与-隔开：">方法二：在文字前面插入<code>#</code>号，内容前面要有空格与<code>#</code>隔开：</h3>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题</span>
+<span class="token title important"><span class="token punctuation">#####</span> 五级标题</span>
+<span class="token title important"><span class="token punctuation">######</span> 六级标题</span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/609cc44b9a9df01da5c84541df3a72db.jpeg" alt="方法二"></p>
+<hr>
+<h2 id="3-段落">3.段落</h2>
+<blockquote>
+<p>方法一：在段落最后使用加入<code>&lt;br/&gt;</code>标签实现换行。<br>
+方法二：段落最后按<code>两次回车</code>，直接隔一行写。</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">段落1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span> 
+段落2</code></pre>
+<p>或者：</p>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">段落1
+
+段落2</code></pre>
+<hr>
+<h2 id="4-文字效果">4.文字效果</h2>
+<blockquote>
+<p>改变字体形态相关写法</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span><span class="token content">斜体文本</span><span class="token punctuation">*</span></span>
+<span class="token italic"><span class="token punctuation">_</span><span class="token content">斜体文本</span><span class="token punctuation">_</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">粗体文本</span><span class="token punctuation">**</span></span>
+<span class="token italic"><span class="token punctuation">_</span><span class="token content">粗体文本</span><span class="token punctuation">_</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content"><span class="token italic"><span class="token punctuation">*</span><span class="token content">粗斜体文本</span><span class="token punctuation">*</span></span></span><span class="token punctuation">**</span></span>
+<span class="token strike"><span class="token punctuation">~~</span><span class="token content">带删除线文本</span><span class="token punctuation">~~</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">></span></span>带下划线文本<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">></span></span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><em>斜体文本</em><br>
+<em>斜体文本</em><br>
+<strong>粗体文本</strong><br>
+<em>粗体文本</em><br>
+<em><strong>粗斜体文本</strong></em><br>
+<s>带删除线文本</s><br>
+<u>带下划线文本</u></p>
+<hr>
+<h2 id="5-分隔线">5.分隔线</h2>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important">***
+<span class="token punctuation">---</span></span>
+<span class="token title important">******
+<span class="token punctuation">----------</span></span>
+__________
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span><span class="token punctuation">></span></span></code></pre>
+<p>输出结果：<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/b27aeb1539ec9fc8b1ecf80e65f44ec2.png" alt="分割线"></p>
+<hr>
+<h2 id="6-列表">6.列表</h2>
+<blockquote>
+<p>Markdown 支持有序列表和无序列表。<br>
+无序列表可使用星号:<code>*</code>、加号：<code>+</code>、减号<code>-</code>都可以，符号与内容要有空格隔开。<br>
+有序列表直接<code>数字+.</code>即可,符号与内容要有空格隔开。</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">*</span> 无序列表项1
+<span class="token list punctuation">*</span> 无序列表项2
+
+<span class="token list punctuation">+</span> 无序列表项1
+<span class="token list punctuation">+</span> 无序列表项2
+
+<span class="token list punctuation">-</span> 无序列表项1
+<span class="token list punctuation">-</span> 无序列表项2
+
+<span class="token list punctuation">1.</span> 有序列表1
+<span class="token list punctuation">2.</span> 有序列表2
+<span class="token list punctuation">3.</span> 有序列表3</code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/93bda90ffe4af9ad5ed5e6b844c0f1b6.jpeg" alt="列表"></p>
+<blockquote>
+<p>列表嵌套写法：直接在第二行按Tab键或按四下空格缩进一下即可。</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token list punctuation">1.</span> 第一项：
+    <span class="token list punctuation">-</span> 第一项第一个
+    <span class="token list punctuation">-</span> 第一项第二个
+<span class="token list punctuation">2.</span> 第二项：
+    <span class="token list punctuation">-</span> 第二项第一个
+    <span class="token list punctuation">-</span> 第二项第二个</code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/ef6305325bdccebe5540cd2d87df29cd.jpeg" alt="嵌套写法"></p>
+<hr>
+<h2 id="7-引用区块">7.引用区块</h2>
+<blockquote>
+<p>在文本前面添加&gt; 符号即可将文本变为引用区块。</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token blockquote punctuation">></span> 文本内容</code></pre>
+<p>输出结果：<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/a5070f4115d23a2cd545bfd4820e1560.jpeg" alt="区块"></p>
+<hr>
+<h2 id="8-代码块">8.代码块</h2>
+<blockquote>
+<p>可使用三个<kbd>`</kbd>符号包裹住代码块，并指定一种语言即可生成代码预览区域。此符号一定要在英文状态下才能打出。</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/dc77b136ea98b7d74942c123d1c3eeaa.jpeg" alt="代码块"></p>
+<blockquote>
+<p>如果在文字行内插入代码块，可以在代码前后分别插入一个<kbd>`</kbd>符号即可。</p>
+</blockquote>
+<hr>
+<h2 id="9-链接">9.链接</h2>
+<blockquote>
+<p>有两种写法</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">链接写法1：&lt;https://cn.bing.com/>
+链接写法2：<span class="token url">[<span class="token content">必应</span>](<span class="token url">https://cn.bing.com/</span>)</span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p>链接写法1：<a href="https://cn.bing.com/">https://cn.bing.com/</a><br>
+链接写法2：<a href="https://cn.bing.com/">必应</a></p>
+<hr>
+<h2 id="10-图片">10.图片</h2>
+<blockquote>
+<p>Markdown 图片语法格式如下：</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">alt 属性文本</span>](<span class="token url">图片地址</span>)</span>
+
+<span class="token url"><span class="token operator">!</span>[<span class="token content">alt 属性文本</span>](<span class="token url">图片地址</span> <span class="token string">"可选标题"</span>)</span></code></pre>
+<blockquote>
+<p>例子：</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">百度</span>](<span class="token url">https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png</span>)</span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="百度"></p>
+<blockquote>
+<p>第二种方法</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token url"><span class="token operator">!</span>[<span class="token content">百度</span>][<span class="token variable">1</span>]</span>
+
+[1]:https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png</code></pre>
+<blockquote>
+<p>两种方法效果相同</p>
+</blockquote>
+<hr>
+<h2 id="11-表格">11.表格</h2>
+<blockquote>
+<p>制作表格可使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
+</blockquote>
+<p>也可以设置表格的对齐方式：<br>
+<code>-:</code>设置内容和标题栏居右对齐。<br>
+<code>:-</code>设置内容和标题栏居左对齐。<br>
+<code>:-:</code>设置内容和标题栏居中对齐。</p>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> 左对齐 </span><span class="token punctuation">|</span><span class="token table-header important"> 右对齐 </span><span class="token punctuation">|</span><span class="token table-header important"> 居中对齐 </span><span class="token punctuation">|</span><span class="token table-header important"> 默认对齐 </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span> <span class="token punctuation">:-----</span><span class="token punctuation">|</span> <span class="token punctuation">----:</span>  <span class="token punctuation">|</span> <span class="token punctuation">:----:</span>  <span class="token punctuation">|</span> <span class="token punctuation">------</span>  <span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格  </span><span class="token punctuation">|</span><span class="token table-data">  单元格  </span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格 </span><span class="token punctuation">|</span><span class="token table-data"> 单元格  </span><span class="token punctuation">|</span><span class="token table-data">  单元格  </span><span class="token punctuation">|</span></span></span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th>默认对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>高级用法</h1>
+<h2 id="支持-HTML-代码">支持 HTML 代码</h2>
+<blockquote>
+<p>markdown是支持html且正常识别。因此，可以解锁更多自定义写法。</p>
+</blockquote>
+<p>例：标题</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>一级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>二级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>三级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">></span></span>四级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">></span></span>五级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span>六级标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span></code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/609cc44b9a9df01da5c84541df3a72db.jpeg" alt=""></p>
+<blockquote>
+<p>可以去查阅Html的文档了解更多：<a href="https://www.runoob.com/html/">菜鸟教程-HTML文档</a></p>
+</blockquote>
+<hr>
+<h2 id="转义字符">转义字符</h2>
+<blockquote>
+<p>如果在输出以下字符无法正常输出,可在字符前面加上反斜杠<code>\</code>符号。<br>
+例如我想正常输出” * “号，且不会被识别成格式控制符号，可以写为<code>\*</code></p>
+</blockquote>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/ffc6988469caceefb6927763a11af2f7.jpeg" alt="转义字符表"></p>
+<blockquote>
+<p>竖线比较特殊，在markdown的表格内不能直接用反斜杠<code>\|</code>转义，可使用html的字符代码<code>&amp;#124;</code>代替。</p>
+</blockquote>
+<hr>
+<h2 id="数学公式">数学公式</h2>
+<blockquote>
+<p>输出数学公式需要对应的插件支持。只需要用<code>$</code>符号把公式包裹起来就行。如果是复杂的公式则可以用两个<code>$$</code>符号。</p>
+</blockquote>
+<blockquote>
+<p>我的博客是安装了MathJax 数学插件的</p>
+</blockquote>
+<pre class="language-markdown" data-language="markdown"><code class="language-markdown">行内公式（适用于简单公式）：$ x^2 + \sqrt&#123;y&#125; = z $
+
+单独占一行(适用于复杂的公式)：
+$$
+\frac&#123;d&#125;&#123;dx&#125;e^&#123;ax&#125;=ae^&#123;ax&#125;\quad \sum_&#123;i=1&#125;^&#123;n&#125;&#123;(X_i - \overline&#123;X&#125;)^2&#125;
+$$</code></pre>
+<blockquote>
+<p>输出结果：</p>
+</blockquote>
+<p>行内公式（适用于简单公式）：$ x^2 + \sqrt{y} = z $</p>
+<p>单独占一行(适用于复杂的公式)：</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mo>=</mo><mi>a</mi><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mspace width="1em"/><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>i</mi></msub><mo>−</mo><mover accent="true"><mi>X</mi><mo stretchy="true">‾</mo></mover><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mrow><annotation encoding="application/x-tex">\frac{d}{dx}e^{ax}=ae^{ax}\quad \sum_{i=1}^{n}{(X_i - \overline{X})^2}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9291em;vertical-align:-1.2777em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span><span style="top:-3.8033em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<hr>
+<p>好了，教程到这里就结束了（｡ò ∀ ó｡）</p>
+<p>试着自己用markdown写一些东西吧(σ′▽‵)′▽‵)σ</p>
+]]></content>
+      <categories>
+        <category>语法</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Termux安装kali-NetHunter</title>
+    <url>/post/161d4b0f.html</url>
+    <content><![CDATA[<h2 id="Kali-NetHunter介绍">Kali NetHunter介绍</h2>
+<p>Kali NetHunter是一个基于kali linux的安卓渗透平台，完全开源、免费，基于<code>Termux</code>。</br><br>
+官方安装及使用文档： <a href="https://www.kali.org/docs/nethunter/nethunter-rootless/">https://www.kali.org/docs/nethunter/nethunter-rootless/</a></p>
+<blockquote>
+<p>友情提醒： 因为有图形化界面，安装后软件大小达到了惊人的10GB+，后续安装一些软件包，直奔15GB。</p>
+</blockquote>
+<hr>
+<h2 id="效果展示">效果展示</h2>
+<div align="center" class="aspect-ratio">
+  <iframe
+    src="https://player.bilibili.com/player.html?aid=557763032&&page=1&as_wide=1&high_quality=1&danmaku=0"
+    scrolling="no"
+    border="0"
+    frameborder="no"
+    framespacing="0"
+    high_quality="1"
+    danmaku="1"
+    allowfullscreen="true"
+  ></iframe>
+</div>
+<hr>
+<h2 id="安装过程">安装过程</h2>
+<p>在Termux中执行以下命令</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash"># 申请存储访问权限
+termux-setup-storage
+# 安装 wget
+pkg install wget
+# 下载 安装脚本
+wget -O install-nethunter-termux https:&#x2F;&#x2F;offs.ec&#x2F;2MceZWr
+# 给脚本执行权限
+chmod +x install-nethunter-termux 
+# 运行安装脚本
+.&#x2F;install-nethunter-termux</code></pre>
+<div class="tip warning faa-horizontal animated"><p>第一步时权限请允许</br><br>
+在第二步时如果卡住，可以替换为<code>wget -O install-nethunter-termux https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux</code></p>
+</div>
+<p>如果顺利的话，你就开始安装了<br>
+<img src="https://imgsrc.baidu.com/super/pic/item/9f510fb30f2442a7e205a07b9443ad4bd01302e0.jpg" alt=""></p>
+<blockquote>
+<p>因为资源包较大(1GB+)，可以开着网络代理，提高效率和成功率。</p>
+</blockquote>
+<p>如果安装失败，需要删除下载的资源包，再次执行安装脚本。</p>
+<blockquote>
+<p>安装成功的效果图如下：<br>
+<img src="https://imgsrc.baidu.com/super/pic/item/c2cec3fdfc039245f6ecbcd1c294a4c27c1e2596.jpg" alt=""></p>
+</blockquote>
+<hr>
+<h2 id="基本命令-参考文章">基本命令(<a href="https://www.sqlsec.com/2018/05/termux.html#%E5%AE%89%E8%A3%85-Kali-NetHunter">参考文章</a>)</h2>
+<p><img src="https://imgsrc.baidu.com/super/pic/item/9c16fdfaaf51f3de500de4bad1eef01f3b2979b5.jpg" alt="命令说明"></p>
+<h2 id="图形化界面">图形化界面</h2>
+<p>先执行<code>nh kex</code>(第一次需要设置密码)<br>
+<img src="https://imgsrc.baidu.com/super/pic/item/42a98226cffc1e17de36d1ef0f90f603728de967.jpg" alt=""></p>
+<blockquote>
+<p>可以看到，我的端口号为<code>5901</code></p>
+</blockquote>
+<p>vnc连接软件可以使用kali官方的NetHunter-KeX，但操作起来不方便。</p>
+<p>我使用的是手机端的<a href="https://f-droid.org/zh_Hans/packages/com.gaurav.avnc/">AVNC</a></p>
+<p>然后使用VNC连接(端口和密码要正确)<br>
+<img src="https://imgsrc.baidu.com/super/pic/item/f603918fa0ec08fad2824e791cee3d6d54fbda6a.jpg" alt=""></p>
+<blockquote>
+<p>效果图</p>
+</blockquote>
+<p><img src="https://imgsrc.baidu.com/super/pic/item/472309f790529822e3ed641d92ca7bcb0b46d416.jpg" alt="VNC图形化界面"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Termux</tag>
+        <tag>kali</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo+github搭建博客教程</title>
+    <url>/post/aa65a614.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>注意，这篇文章篇幅较长，主要针对新手，每一步很详细，所以可能会显得比较啰嗦，所以建议基础比较好小伙伴根据目录选择自己感兴趣的部分跳着看✧٩(ˊωˋ*)و✧</p>
+<blockquote>
+<p>此安装过程为ubuntu(或Debian)的安装过程</p>
+</blockquote>
+<h2 id="安装">安装</h2>
+<h3 id="安装git">安装git</h3>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">apt-get update
+apt install git-core -y</code></pre>
+<p>检查是否安装成功<br>
+git -v</p>
+<h3 id="安装nodejs（以14-x为例">安装nodejs（以14.x为例)</h3>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_14.x | bash  - 
+sudo apt install nodejs</code></pre>
+<p>检查是否安装成功</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">node -v
+npm -v</code></pre>
+<h3 id="安装hexo">安装hexo</h3>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">npm install hexo-cli -g</code></pre>
+<h2 id="搭建">搭建</h2>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">hexo init MyBlog &#x2F;&#x2F;也可以用其他文件夹
+cd MyBlog</code></pre>
+<p>测试</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">hexo g &amp;&amp; hexo s</code></pre>
+<p>用浏览器打开<a href="https://localhost:4000/">https://localhost:4000/</a><br>
+看到如下图就是成功了<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/9f4a6a09b5b3f6516668ab45827cc574.png" alt="效果"><br>
+按<code>ctrl+c</code>关闭本地服务器。</p>
+<h2 id="GitHub配置">GitHub配置</h2>
+<h3 id="注册Github账号创建个人仓库">注册Github账号创建个人仓库</h3>
+<p>接下来就去注册一个<code>github</code>账号，用来存放我们的网站。大多数小伙伴应该都有了吧，作为一个合格的程序猿（媛）还是要有一个的。<br>
+打开<a href="https://github.com/">https://github.com/</a>，新建一个项目仓库<code>New repository</code>，如下所示：<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/ba46323db6dbccc9d1f923e2569daa92.jpeg" alt="github配置"><br>
+然后如上图所示，输入自己的账号名字，后面一定要加.github.io后缀，README初始化也要勾。</p>
+<h3 id="生成SSH添加到GitHub">生成SSH添加到GitHub</h3>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;</code></pre>
+<p>这里的<code>yourname</code>输入你的GitHub用户名，<code>youremail</code>输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。例如我的：</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">git config --global user.name &quot;yxlr123&quot;
+git config --global user.email &quot;dbh2858304517@gmail.com&quot;</code></pre>
+<p>可以输入下面两条检查一下</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">git config user.name
+git config user.email</code></pre>
+<p><strong>然后创建SSH,一路回车</strong></p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre>
+<blockquote>
+<p><code>youremail</code>输入你GitHub的邮箱</p>
+</blockquote>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">cat &#x2F;root&#x2F;.ssh&#x2F;id_rsa.pub</code></pre>
+<p>将输出的内容复制下来<br>
+打开<a href="github.com">github</a>，在头像下面点击<code>settings</code>，再点击<code>SSH and GPG keys</code>，新建一个<code>SSH</code>，名字随便取一个都可以，把你的<code>id_rsa.pub</code>里面的信息复制进去。如图：<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/56792662574ff820a5e50244c9324cf9.png" alt="ssh_keys"><br>
+然后再输入下面内容：</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">ssh -T git@github.com</code></pre>
+<p>出现你的用户名，那就成功了。</p>
+<h3 id="将hexo部署到GitHub">将hexo部署到GitHub</h3>
+<p>打开博客根目录下的_config.yml文件，这是博客的配置文件，在这里你可以修改与博客配置相关的各种信息。</br><br>
+修改最后一行的配置：</p>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/yourname/yourname.github.io
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master</code></pre>
+<p>repository修改为你自己的github项目地址即可，就是部署时，告诉工具，将生成网页通过git方式上传到你对应的链接仓库中。</p>
+<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">npm install hexo-deployer-git --save</code></pre>
+<p>然后</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">hexo chean
+hexo g
+hexo d</code></pre>
+<p>其中<code>hexo clean</code>清除了你之前生成的东西，也可以不加。<code>hexo g</code>生成静态文章，<code>hexo d</code>部署文章。</p>
+<blockquote>
+<p>注意<code>hexo d</code>时可能要你输入<code>username</code>和<code>password</code>。</p>
+</blockquote>
+<p>得到下图就说明部署成功了，过一会儿就可以在<a href="https://yourname.github.io">https://yourname.github.io</a> 这个网站看到你的博客了！！<br>
+<img src="https://pic.rmb.bdstatic.com/bjh/700c6575d1ccd3056e49e993de712c24.png" alt="部署成功"></p>
+<h2 id="写文章、发布文章">写文章、发布文章</h2>
+<p>新建一篇文章输入：</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">hexo new post &quot;article title&quot;</code></pre>
+<p><code>article title</code>是文章标题<br>
+<code>source\_posts</code>的目录，可以发现下面多了一个<code>.md</code>文件，它就是你的文章文件啦。你可以直接使用<code>markdown</code>语法写文章！<br>
+编写完markdown文件后，根目录下输入<code>hexo g</code>生成静态网页，然后输入<code>hexo s</code>可以本地预览效果，按<code>ctrl+c</code>关闭本地服务器，最后输入<code>hexo d</code>上传到github上。这时打开你的github.io主页就能看到发布的文章啦。</p>
+<h2 id="个性化">个性化</h2>
+<p>在文件根目录下的<code>_config.yml</code>，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的<a href="https://hexo.io/zh-cn/docs/configuration">配置描述</a>。</p>
+<pre class="language-Yml" data-language="Yml"><code class="language-Yml"># Site
+title: Hexo #网站名字
+subtitle: &#39;&#39; #网站副标题
+description: &#39;&#39; #网站描述
+keywords:
+author: John Doe #你的名字
+language: en #网站使用的语言
+timezone: &#39;&#39; #网站时区
+# URL
+## 如果您的网站位于子目录中，请将url设置为&#39;https:&#x2F;&#x2F;yoursite.com&#x2F;child&#39;，将root设置为&#39;&#x2F;child&#x2F;&#39;
+url: https:&#x2F;&#x2F;yoursite.com #可以改成你的github.io网址
+root: &#x2F;
+permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # 设置为false时会将末尾的index.html去掉
+  trailing_html: true # 设置为false时会将末尾的.html去掉，对index.html无效</code></pre>
+<h2 id="更多玩法">更多玩法</h2>
+<h3 id="更改主题">更改主题</h3>
+<p>我们在了解Hexo博客文件基础之后，知道主题文件就放在themes文件下，那么我们就可以去Hexo官网下载喜欢的主题，复制进去然后修改参数即可。<br>
+网上大多数主题都是github排名第一的Next主题，但是我个人不是很喜欢，我在网上看到一个主题感觉还不错：<a href="https://github.com/aloeJun/hexo-themes-matery-pro">hexo-theme-matery-pro</a>，这个主题看着比较漂亮，并且对新人比较友好，点起来很舒服，功能也比较很多。<br>
+<a href="https://github.com/aloeJun/hexo-themes-matery-pro/blob/master/README.md">配置文档</a></p>
+<h2 id="最后">最后</h2>
+<p>hexo还有很多玩法，自己去探索吧✧٩(ˊωˋ*)و✧</p>
+<blockquote>
+<p>好吧，就是因为我太懒了</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>web</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【源码分享】html 3D魔方</title>
+    <url>/post/f9fe76d9.html</url>
+    <content><![CDATA[<p><img src="https://imgsrc.baidu.com/super/pic/item/c8ea15ce36d3d539a32a3a1d7f87e950342ab0dc.jpg" alt=""></p>
+<h3 id="源码介绍">源码介绍</h3>
+<p>使用<code>html</code>+<code>css</code>+<code>js</code>实现的魔方小游戏，可用于404错误页面。</p>
+<h3 id="演示">演示</h3>
+<p>演示地址： <a href="https://games.yxlr.tk/3d-cube">https://games.yxlr.tk/3d-cube</a></p>
+<h3 id="下载">下载</h3>
+<p>下载链接：</p>
+<ul>
+<li>安知鱼网盘：<a href="https://cloud.anzhiy.cn/s/yv5ztK">https://cloud.anzhiy.cn/s/yv5ztK</a><br>
+密码：<a href="http://yxlr.tk">yxlr.tk</a></li>
+<li>*度网盘：<br>
+地址：<a href="https://pan.baidu.com/s/1hz1gHIAq9dDlZKWSvkYO8w">https://pan.baidu.com/s/1hz1gHIAq9dDlZKWSvkYO8w</a><br>
+提取码：yxlr</li>
+</ul>
+]]></content>
+      <categories>
+        <category>源码分享</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>源码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一次安卓折腾记录</title>
+    <url>/post/71bff6a3.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>最近因为一些原因，我没法折腾电脑了。<br>
+但我怎么能闲着呢，于是我准备对手机下手。<br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.3t1cwfsq6o00.webp" alt="Termux"><br>
+折腾安卓，当然要用<code>Termux</code>了，因为它有丰富的软件包。<br>
+Termux的下载地址： <a href="https://f-droid.org/en/packages/com.termux/">传送门</a></p>
+<hr>
+<h2 id="折腾开始">折腾开始</h2>
+<p>我的需求不多，只是想在手机上写一些<code>python</code>项目和一些渗透练习，偶然开个服务器（<s>真的不多</s>）</br></p>
+<hr>
+<h2 id="1-更换软件源">1.更换软件源</h2>
+<blockquote>
+<p>因为<code>Termux</code>的服务器在国外，所以访问速度十分感人。</p>
+</blockquote>
+<p>我这里更换的是清华源</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">sed -i &#39;s@^\(deb.*stable main\)$@#\1\ndeb https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;termux&#x2F;apt&#x2F;termux-main stable main@&#39; $PREFIX&#x2F;etc&#x2F;apt&#x2F;sources.list
+apt update &amp;&amp; apt upgrade</code></pre>
+<blockquote>
+<p>全程<code>y</code>回车即可</p>
+</blockquote>
+<p>如果你需要更换其它源，可以执行<code>termux-change-repo</code>，然后使用自带方向键选择你需要更换的软件源。同样全程<code>y</code>回车即可。<br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.gdiqdmw8few.webp" alt="更换软件源"></p>
+<hr>
+<h2 id="2-安装code-server失败">2.安装code-server<em>失败</em></h2>
+<p>因为要做python开发，<s>如果使用<code>vim</code>来编写，属实是有些蛋疼。</s><br>
+我想起了以前在服务器上使用<code>code-server</code>是多么的爽，完美解决了没有图形化界面的痛。<br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.yjtai7jp1sw.webp" alt="code-server"><br>
+先安装<code>nodejs</code>(<code>pkg install nodejs</code>)，然后运行安装脚本，结果报错了！ 真让人头疼。</br><br>
+之后又尝试了使用<code>npm</code>安装，结果可想而知，还是报错(<em>≧ｍ≦</em>) </br><br>
+安装<code>code-server</code>失败，我分析了以下两种原因：</p>
+<ul>
+<li><code>nodejs</code>版本不适配(因为Termux默认安装最新版)</li>
+<li><code>Termux</code>环境不完整(毕竟不是完整的linux)</li>
+</ul>
+<h2 id="3-曲线救国">3.曲线救国</h2>
+<p>虽然Termux不能直接安装<code>code-server</code>，但是它可以使用<code>proot</code>来运行完整的linux，然后我就可以在linux中安装<code>code-server</code>了~~（怎么感觉我在套娃）~~</br></p>
+<h3 id="理论存在，实践开始">理论存在，实践开始</h3>
+<p>安装linux<code>proot</code>容器，我使用的是<a href="https://www.sqlsec.com/2020/04/termuxlinux.html">国光大佬写的脚本</a></br><br>
+执行如下命令安装基本依赖:</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">pkg install proot git python -y</code></pre>
+<p>然后：</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">git clone https:&#x2F;&#x2F;github.com&#x2F;sqlsec&#x2F;termux-install-linux
+cd termux-install-linux
+python termux-linux-install.py</code></pre>
+<p><img src="https://cdn.staticaly.com/gh/yxlr123/imges@main/xxx.2ln4mi0q0e60.webp" alt=""><br>
+我这里安装的是Ubuntu。</p>
+<p>启动<code>proot</code>容器</p>
+<pre class="language-Bash" data-language="Bash"><code class="language-Bash">cd ~&#x2F;Termux-Linux&#x2F;Ubuntu
+.&#x2F;start-ubuntu.sh</code></pre>
+<p>接下来安装<code>code-server</code><br>
+更新软件源<code>sudo apt-get update</code><br>
+安装nodejs</p>
+<pre class="language-none"><code class="language-none">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_14.x | bash  - 
+sudo apt install nodejs</code></pre>
+<p>最后安装<code>code-server</code></p>
+<pre class="language-none"><code class="language-none">curl -fsSL https:&#x2F;&#x2F;code-server.dev&#x2F;install.sh | sh -s -- --dry-run # 安装
+code-server # 启动</code></pre>
+<p>终于成功了<br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.3eww1rc64f60.webp" alt=""><br>
+先按<kbd>Ctrl</kbd>+<kbd>c</kbd>关闭。<br>
+<code>vim ~/.config/code-server/config.yaml</code><br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.5xufa6xsr6k0.webp" alt=""><br>
+更改密码，再按<kbd>ESC</kbd>键输入<code>:wq</code>保存。<br>
+再次启动<code>code-server</code>，使用浏览器打开对应的地址<img class="inline-img" src="https://npm.elemecdn.com/yxlr-images@latest/xxx.745yhnn2rm80.webp" style="height:50px"/>，输入设置的密码，就可以开始使用了。<br>
+<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.1gnxv8a3v5r4.webp" alt=""></p>
+]]></content>
+      <categories>
+        <category>折腾记录</category>
+      </categories>
+      <tags>
+        <tag>Termux</tag>
+        <tag>安卓</tag>
+        <tag>折腾</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客建站指南</title>
+    <url>/post/8862f8fb.html</url>
+    <content><![CDATA[<h1>前言</h1>
+<p>在这里，我会向大家介绍一些建个人博客的各种方案，以及它们的优缺点。</p>
+<blockquote>
+<p>本文章基于本人非常多次的建站经验</p>
+</blockquote>
+<hr>
+<h1>1.PHP博客系统</h1>
+<p>这种方案最简单，有后端，支持自定义主题和插件，但有一定的成本（需要服务器和域名）</br><br>
+种类较多，简单地说三个比较热门的。</p>
+<div class="tabs" id="php博客系统"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#php博客系统-1">WordPress</button></li><li class="tab"><button type="button" data-href="#php博客系统-2">Z-Blog</button></li><li class="tab"><button type="button" data-href="#php博客系统-3">Typecho</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="php博客系统-1"><p>官网传送门：<a href="https://cn.wordpress.org/">WordPress</a><br>
+<img src="https://img.yxlr.tk/file/myblogyxlr/img/%E6%96%87%E7%AB%A0/screenshot_20190904_000917-1024x486.png" alt="wordpress"></p>
+<blockquote>
+<p>优点</p>
+</blockquote>
+<p>使用人数较多，插件和主题丰富，功能强大，稳定性高。</p>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+<p>不易操作，过于臃肿，体积大。</br><br>
+目前已经开始没落了，使用量不断减少。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="php博客系统-2"><p>属实是万年老二了。<br>
+官网传送门：<a href="https://www.zblogcn.com/">Z-Blog</a><br>
+<img src="https://img.yxlr.tk/file/myblogyxlr/img/%E6%96%87%E7%AB%A0/1255423131-0.jpg" alt="Z-Blog"></p>
+<blockquote>
+<p>优点</p>
+</blockquote>
+<p>与wordpress相比，Z-Blog比较简洁。</p>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+<p>插件和主题没有wordpress丰富，但够用。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="php博客系统-3"><p>官网传送门：<a href="https://typecho.org/">Typecho</a><br>
+<img src="https://img.yxlr.tk/file/myblogyxlr/img/%E6%96%87%E7%AB%A0/st1.png" alt="Typecho"></p>
+<blockquote>
+<p>优点</p>
+</blockquote>
+<p>非常简洁，功能够用。</p>
+<blockquote>
+<p>缺点</p>
+</blockquote>
+<p>有个bug，后台默认调用<code>HTTP</code>资源，如果网站使用<code>https</code>的话，需要自己进行修改才能访问后台。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<hr>
+<h1>2.其它博客系统</h1>
+<p>这一类相较于PHP系统，搭建没有那么方便。也需要自己的服务器和域名。<br>
+如果你是100%纯小白，不推荐使用此方案。</p>
+<h2 id="一些开源的博客系统">一些开源的博客系统</h2>
+<p>比如<a href="https://docs.zhyd.me/">OneBlog</a><br>
+<img src="https://img.yxlr.tk/file/myblogyxlr/img/%E6%96%87%E7%AB%A0/d1ce53ff.png" alt="OneBlog后台"><br>
+<img src="https://img.yxlr.tk/file/myblogyxlr/img/%E6%96%87%E7%AB%A0/dce49a8b.png" alt="OneBlog主页"><br>
+配置较为简单。本人没有深度使用过，就不做出评价了。</p>
+<h2 id="自己进行搭建">自己进行搭建</h2>
+<p>如果你有一定的编程基础，可以尝试用<code>Django</code>等框架进行开发。</p>
+<blockquote>
+<p>优点</p>
+</blockquote>
+<p><s>自己开发，成就感十足(눈_눈)</s>，自定义程度非常非常<strong>高</strong></p>
+<blockquote>
+<p>缺点<br>
+有难度，开发比较费时间和头发( •̥́ ˍ •̀ू )嘤嘤嘤~</p>
+</blockquote>
+<hr>
+<h1>3.静态网站生成器+网站托管服务</h1>
+<blockquote>
+<p>此方案可以做到几乎<u><em><strong>零成本</strong></em></u></p>
+</blockquote>
+<p>我的博客目前使用的就是此方案。<br>
+在这里我推荐几个受欢迎的静态网站生成器。</p>
+<h2 id="Jekyll">Jekyll</h2>
+<p>Jekyll是最受欢迎的开源静态生成工具之一，可以跨平台配置。Jekyll利用 Markdown 、 Liquid 、HTML 和 CSS 来生成静态的网页文件，它还支持从常见的 CMS。你能管理永久链接、类别、页面、文章，自定义布局等。非常适合博客网站。</p>
+<h2 id="Huge">Huge</h2>
+<p>Hugo是另一个很受欢迎的用于搭建静态网站的开源框架。它运行速度快、使用简单、可靠性高。还可以提供更高级的主题和一些有用的快捷方式来帮助你轻松完成任务。适合展示网站和博客网站。</p>
+<h2 id="Hexo">Hexo</h2>
+<p>Hexo 基于 Node.js ，除了可以用来快速搭建网站，还提供了丰富的主题和插件。且提供了强大的 API 来扩展功能，可以轻松完成迁移工作。</br></p>
+<blockquote>
+<p>我的博客使用的就是hexo，主题为<a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></p>
+</blockquote>
+<h2 id="优缺点">优缺点</h2>
+<p>再来说一说此方案共同的优缺点。</p>
+<blockquote>
+<p>优点<br>
+可以做到几乎零成本，自定义程度高</p>
+</blockquote>
+<blockquote>
+<p>缺点<br>
+搭建和配置时，可能会出现一些意想不到的错误。建议及时做好备份。</p>
+</blockquote>
+<hr>
+<h1>总结</h1>
+<p>如果你是小白，推荐使用第一种方案。</br><br>
+如果你是大佬，可以试试第二种方案。</br><br>
+如果你像我一样，不希望网站成本太高，可以试试第三种方案。</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>博客</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自建jsdelivr反代服务</title>
+    <url>/post/7db9c141.html</url>
+    <content><![CDATA[<h1>起因</h1>
+<p>在前一段时间，jsdelivr国内突然报错，还出现了DNS污染。</p>
+<p><img src="https://imgsrc.baidu.com/super/pic/item/902397dda144ad344ee7a35995a20cf430ad8597.jpg" alt="报错"></p>
+<p>后来官方修复了，但是国内几个节点寄了。备案还掉了≥﹏≤。</p>
+<h1>想法</h1>
+<p>我萌生了自建cdn的想法，但当我看了看网上的方法，最终选择了使用php进行反向代理</p>
+<pre class="language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+<span class="token comment">//代理的域名及使用的协议最后不用加/</span>
+<span class="token variable">$target_host</span><span class="token operator">=</span><span class="token string double-quoted-string">"https://fastly.jsdelivr.net"</span><span class="token punctuation">;</span>
+<span class="token comment">//处理代理的主机得到协议和主机名称</span>
+<span class="token variable">$protocal_host</span><span class="token operator">=</span><span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token variable">$target_host</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//解决中文乱码</span>
+<span class="token comment">#header("Content-Type:text/html;charset=gb2312"); </span>
+<span class="token comment">//获取浏览器的的Agent</span>
+<span class="token variable">$Agent</span> <span class="token operator">=</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'HTTP_USER_AGENT'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//以.分割域名字符串</span>
+<span class="token variable">$rootdomain</span><span class="token operator">=</span><span class="token function">explode</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"."</span><span class="token punctuation">,</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">"SERVER_NAME"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//获取数组的长度</span>
+<span class="token variable">$lenth</span><span class="token operator">=</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$rootdomain</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//获取顶级域名</span>
+<span class="token variable">$top</span><span class="token operator">=</span><span class="token string double-quoted-string">"."</span><span class="token operator">.</span><span class="token variable">$rootdomain</span><span class="token punctuation">[</span><span class="token variable">$lenth</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//获取主域名</span>
+<span class="token variable">$root</span><span class="token operator">=</span><span class="token string double-quoted-string">"."</span><span class="token operator">.</span><span class="token variable">$rootdomain</span><span class="token punctuation">[</span><span class="token variable">$lenth</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">//解析url参数</span>
+<span class="token keyword">function</span> <span class="token function-definition function">get_request_params</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span> 
+   <span class="token variable">$url</span> <span class="token operator">=</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">"REQUEST_URI"</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+   
+   <span class="token variable">$refer_url</span> <span class="token operator">=</span> <span class="token function">parse_url</span><span class="token punctuation">(</span><span class="token variable">$url</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   
+   <span class="token variable">$params</span> <span class="token operator">=</span> <span class="token variable">$refer_url</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'query'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+   
+   <span class="token variable">$arr</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">empty</span><span class="token punctuation">(</span><span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+   <span class="token punctuation">&#123;</span> 
+       <span class="token variable">$paramsArr</span> <span class="token operator">=</span> <span class="token function">explode</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'&amp;'</span><span class="token punctuation">,</span><span class="token variable">$params</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+   
+       <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$paramsArr</span> <span class="token keyword">as</span> <span class="token variable">$k</span><span class="token operator">=></span><span class="token variable">$v</span><span class="token punctuation">)</span> 
+       <span class="token punctuation">&#123;</span> 
+          <span class="token variable">$a</span> <span class="token operator">=</span> <span class="token function">explode</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'='</span><span class="token punctuation">,</span><span class="token variable">$v</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+          <span class="token variable">$arr</span><span class="token punctuation">[</span><span class="token variable">$a</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$a</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+       <span class="token punctuation">&#125;</span> 
+   <span class="token punctuation">&#125;</span> 
+   <span class="token keyword">return</span> <span class="token variable">$arr</span><span class="token punctuation">;</span> 
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//解析HTTP响应头</span>
+<span class="token keyword">function</span> <span class="token function-definition function">parse_headers</span><span class="token punctuation">(</span><span class="token variable">$headers</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token comment">//$head = array();</span>
+	<span class="token keyword">global</span> <span class="token variable">$root</span><span class="token punctuation">,</span><span class="token variable">$top</span><span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span> <span class="token variable">$headers</span> <span class="token keyword">as</span> <span class="token variable">$k</span><span class="token operator">=></span><span class="token variable">$v</span> <span class="token punctuation">)</span>
+    <span class="token punctuation">&#123;</span>
+        <span class="token variable">$t</span> <span class="token operator">=</span> <span class="token function">explode</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">':'</span><span class="token punctuation">,</span> <span class="token variable">$v</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token keyword">isset</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span>
+		<span class="token punctuation">&#123;</span>
+			<span class="token comment">//$head[ trim($t[0]) ] = trim( $t[1] );</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">strcasecmp</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Set-Cookie'</span><span class="token punctuation">,</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+			<span class="token punctuation">&#123;</span>
+				<span class="token comment">//处理COOkie的domain关键字</span>
+				<span class="token variable">$targetcookie</span><span class="token operator">=</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token operator">.</span><span class="token string double-quoted-string">";"</span><span class="token punctuation">;</span>
+				<span class="token variable">$res_cookie</span><span class="token operator">=</span><span class="token function">preg_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/domain=.*?;/"</span><span class="token punctuation">,</span><span class="token string double-quoted-string">"domain="</span><span class="token operator">.</span><span class="token variable">$root</span><span class="token operator">.</span><span class="token variable">$top</span><span class="token operator">.</span><span class="token string double-quoted-string">";"</span><span class="token punctuation">,</span><span class="token variable">$targetcookie</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token variable">$res_cookie</span><span class="token operator">=</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token variable">$res_cookie</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token function">strlen</span><span class="token punctuation">(</span><span class="token variable">$res_cookie</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+				<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"Set-Cookie: "</span><span class="token operator">.</span><span class="token variable">$res_cookie</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+			<span class="token keyword">elseif</span><span class="token punctuation">(</span><span class="token function">strcasecmp</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Content-Type'</span><span class="token punctuation">,</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+			<span class="token punctuation">&#123;</span>
+				<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"Content-Type: "</span><span class="token operator">.</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+			<span class="token keyword">elseif</span><span class="token punctuation">(</span><span class="token function">strcasecmp</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Location'</span><span class="token punctuation">,</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+			<span class="token punctuation">&#123;</span>
+				<span class="token variable">$relocation</span><span class="token operator">=</span><span class="token function">str_replace</span><span class="token punctuation">(</span><span class="token variable">$protocal_host</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'host'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">"SERVER_NAME"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"Location: "</span><span class="token operator">.</span><span class="token variable">$relocation</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+			<span class="token keyword">elseif</span><span class="token punctuation">(</span><span class="token function">strcasecmp</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'cache-control'</span><span class="token punctuation">,</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+			
+				<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"cache-control: "</span><span class="token operator">.</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token variable">$t</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				
+			<span class="token keyword">else</span>
+				<span class="token keyword">continue</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+        <span class="token comment">// else</span>
+        <span class="token comment">// &#123;</span>
+            <span class="token comment">// $head[] = $v;</span>
+            <span class="token comment">// if( preg_match( "#HTTP/[0-9\.]+\s+([0-9]+)#",$v, $out ) )</span>
+                <span class="token comment">// $head['reponse_code'] = intval($out[1]);</span>
+        <span class="token comment">// &#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span><span class="token comment">// $head;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//关系数组转换成字符串，每个键值对中间用=连接，以; 分割</span>
+<span class="token keyword">function</span> <span class="token function-definition function">array_to_str</span><span class="token punctuation">(</span><span class="token variable">$array</span><span class="token punctuation">)</span>  
+<span class="token punctuation">&#123;</span>  
+   <span class="token variable">$string</span><span class="token operator">=</span><span class="token string double-quoted-string">""</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">is_array</span><span class="token punctuation">(</span><span class="token variable">$array</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+	<span class="token punctuation">&#123;</span>  
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token variable">$array</span> <span class="token keyword">as</span> <span class="token variable">$key</span> <span class="token operator">=></span> <span class="token variable">$value</span><span class="token punctuation">)</span> 
+		<span class="token punctuation">&#123;</span>   
+			<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">empty</span><span class="token punctuation">(</span><span class="token variable">$string</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+				<span class="token variable">$string</span><span class="token operator">.=</span><span class="token string double-quoted-string">"; "</span><span class="token operator">.</span><span class="token variable">$key</span><span class="token operator">.</span><span class="token string double-quoted-string">"="</span><span class="token operator">.</span><span class="token variable">$value</span><span class="token punctuation">;</span>
+			<span class="token keyword">else</span>
+				<span class="token variable">$string</span><span class="token operator">.=</span><span class="token variable">$key</span><span class="token operator">.</span><span class="token string double-quoted-string">"="</span><span class="token operator">.</span><span class="token variable">$value</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>   
+    <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> 
+	<span class="token punctuation">&#123;</span>  
+            <span class="token variable">$string</span> <span class="token operator">=</span> <span class="token variable">$array</span><span class="token punctuation">;</span>  
+    <span class="token punctuation">&#125;</span>      
+    <span class="token keyword">return</span> <span class="token variable">$string</span><span class="token punctuation">;</span>  
+<span class="token punctuation">&#125;</span>  
+<span class="token comment">//debug to console</span>
+<span class="token keyword">function</span> <span class="token function-definition function">debug_to_console</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_array</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">is_object</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">&#123;</span>
+		<span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"&lt;script>console.log('PHP: "</span><span class="token operator">.</span><span class="token function">json_encode</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string double-quoted-string">"');&lt;/script>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">echo</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"&lt;script>console.log('PHP: "</span><span class="token operator">.</span><span class="token variable">$data</span><span class="token operator">.</span><span class="token string double-quoted-string">"');&lt;/script>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//组装HTTP请求头</span>
+<span class="token variable">$opts</span><span class="token operator">=</span><span class="token string double-quoted-string">""</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'REQUEST_METHOD'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token string single-quoted-string">'POST'</span><span class="token punctuation">)</span> 
+<span class="token punctuation">&#123;</span>
+	<span class="token variable">$postdata</span><span class="token operator">=</span><span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"php://input"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token variable">$opts</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span>
+	<span class="token string single-quoted-string">'http'</span><span class="token operator">=></span><span class="token keyword">array</span><span class="token punctuation">(</span>
+	<span class="token string single-quoted-string">'method'</span><span class="token operator">=></span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'REQUEST_METHOD'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token string single-quoted-string">'content'</span><span class="token operator">=></span><span class="token variable">$postdata</span><span class="token punctuation">,</span>
+    <span class="token string single-quoted-string">'header'</span><span class="token operator">=></span><span class="token string double-quoted-string">"Accept-language: zh-CN\r\n"</span> <span class="token operator">.</span>   <span class="token comment">//可以使用客户端浏览器的$_SERVER['HTTP_ACCEPT_LANGUAGE</span><span class="token string single-quoted-string">']
+			  "user-agent: '</span><span class="token variable">$Agent</span><span class="token string single-quoted-string">'"."\r\n".
+			  "Cookie: ".array_to_str($_COOKIE)."\r\n".
+			  //"Accept-Encoding: gzip, deflate, sdch\r\n".
+			  "Content-Type: ".$_SERVER['</span><span class="token constant">CONTENT_TYPE</span><span class="token string single-quoted-string">']
+			 
+		)
+	);
+	&#125;
+else
+&#123;
+	$opts = array(
+	'</span>http<span class="token string single-quoted-string">'=>array(
+	'</span>method<span class="token string single-quoted-string">'=>$_SERVER['</span><span class="token constant">REQUEST_METHOD</span><span class="token string single-quoted-string">'],
+    '</span>header<span class="token string single-quoted-string">'=>"Accept-language: zh-CN\r\n" .
+			  "user-agent: '</span><span class="token variable">$Agent</span><span class="token string single-quoted-string">'"."\r\n".
+			  //"Accept-Encoding: gzip, deflate, sdch\r\n".
+			  "Cookie: ".array_to_str($_COOKIE)
+		)
+	);
+	
+&#125;
+//
+$context = stream_context_create($opts);
+//发送请求
+$new_request_uri = "";
+$path_script  = pathinfo($_SERVER["PHP_SELF"]);
+//
+if ($path_script['</span>dirname<span class="token string single-quoted-string">']!="/") &#123;
+	$new_request_uri = substr_replace($_SERVER["REQUEST_URI"],"",strpos($_SERVER["REQUEST_URI"],$path_script['</span>dirname<span class="token string single-quoted-string">']),strlen($path_script['</span>dirname<span class="token string single-quoted-string">']));
+&#125; else &#123;
+	$new_request_uri = $_SERVER["REQUEST_URI"];
+&#125;
+$homepage = file_get_contents($protocal_host['</span>scheme<span class="token string single-quoted-string">']."://".$protocal_host['</span>host<span class="token string single-quoted-string">'].$new_request_uri,false,$context);
+//处理file_get_contents返回的响应求头
+parse_headers($http_response_header);
+//替换域名并输出网页
+$homepage=str_replace($protocal_host['</span>host'<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">"SERVER_NAME"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token variable">$homepage</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//输出网页内容</span>
+<span class="token keyword">echo</span> <span class="token variable">$homepage</span><span class="token punctuation">;</span>
+<span class="token delimiter important">?></span></span></code></pre>
+<p>然后配置伪静态(Apache)</p>
+<pre class="language-none"><code class="language-none">RewriteEngine on
+RewriteBase &#x2F;
+RewriteCond $1 ^(index\.php)?$ [OR]
+RewriteCond %&#123;REQUEST_FILENAME&#125; -f [OR]
+RewriteCond %&#123;REQUEST_FILENAME&#125; -d [OR]
+RewriteCond %&#123;REQUEST_FILENAME&#125;  ^index\.php?$
+RewriteRule ^(.*)$ - [S&#x3D;1]
+RewriteRule . &#x2F;index.php [L]</code></pre>
+<blockquote>
+<p>使用方法和jsdelivr一样，我搭建的地址：<a href="https://cdn1.tianli0.top">https://cdn1.tianli0.top</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>cdn</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>jsdelivr</tag>
+        <tag>加速</tag>
+      </tags>
+  </entry>
+</search>

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("JetBrainsMono-BoldItalic.eot"); /* IE9 */
+    src: url("JetBrainsMono-BoldItalic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("JetBrainsMono-BoldItalic.woff2") format("woff2"), /* chrome 36+, firefox 39+,iOS 10+, Android 67+ */
+    url("JetBrainsMono-BoldItalic.woff") format("woff"), /* chrome, firefox */
+    url("JetBrainsMono-BoldItalic.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("JetBrainsMono-BoldItalic.svg#JetBrains Mono") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
