@@ -1,0 +1,1 @@
+function musicBindEvent(){document.querySelector("#nav-music .aplayer-music").addEventListener("click",(function(){yxlr.musicTelescopic()})),document.querySelector("#nav-music .aplayer-button").addEventListener("click",(function(){yxlr.musicToggle(!1)}))}const metingJs=document.querySelector("#nav-music meting-js");metingJs.contains(event.target);
