@@ -857,7 +857,7 @@ RewriteCond %&#123;REQUEST_FILENAME&#125;  ^index\.php?$
 RewriteRule ^(.*)$ - [S&#x3D;1]
 RewriteRule . &#x2F;index.php [L]</code></pre>
 <blockquote>
-<p>使用方法和jsdelivr一样，我搭建的地址：<a href="https://cdn1.tianli0.top">https://cdn1.tianli0.top</a></p>
+<p>使用方法和jsdelivr一样，我搭建的地址：<a href="https://jsd.yxlr.tk">https://jsd.yxlr.tk</a></p>
 </blockquote>
 ]]></content>
       <categories>
