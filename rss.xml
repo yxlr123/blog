@@ -9,8 +9,29 @@
     <atom:link href="https://yxlr.tk/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>分享与收获</description>
-    <pubDate>Sat, 10 Dec 2022 13:19:42 GMT</pubDate>
+    <pubDate>Sun, 11 Dec 2022 05:43:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>关于&quot;jsd反代&quot;文章出错的回应</title>
+      <link>https://yxlr.tk/post/757da5d4.html</link>
+      <guid>https://yxlr.tk/post/757da5d4.html</guid>
+      <pubDate>Sun, 11 Dec 2022 05:43:36 GMT</pubDate>
+      
+      <description>关于&quot;jsd反代&quot;文章出错的回应</description>
+      
+      
+      
+      
+      <category domain="https://yxlr.tk/categories/%E5%8D%9A%E5%AE%A2/">博客</category>
+      
+      
+      <category domain="https://yxlr.tk/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
+      
+      
+      <comments>https://yxlr.tk/post/757da5d4.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Termux安装kali-NetHunter</title>
