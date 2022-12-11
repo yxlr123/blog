@@ -672,9 +672,51 @@ code-server # 启动</code></pre>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>教程</tag>
+        <tag>博客</tag>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于&quot;jsd反代&quot;文章出错的回应</title>
+    <url>/post/757da5d4.html</url>
+    <content><![CDATA[<h2 id="文章出错情况">文章出错情况</h2>
+<p>在本博客的&quot;<a href="https://www.yxlr.tk/post/7db9c141.html">自建jsdelivr反代服务</a>&quot;一文中，自建代理地址写为<strong>Tianli</strong><br>
+搭建的服务<a href="cdn1.tianli0.top">地址</a>，在此表示抱歉</p>
+<p>现已改为正确的<a href="https://jsd.yxlr.tk">https://jsd.yxlr.tk</a></p>
+<h2 id="出错原因">出错原因</h2>
+<h3 id="为什么会出错？">为什么会出错？</h3>
+<p>经过翻找git提交记录，发现，在一次cdn更换提交中，批量将 <code>cdn.yxlr.tk</code>替换为 <code>cdn1.tianli0.top</code><br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.1/yxlr.6zhs5026qak0.jpg" alt="git记录"></p>
+<blockquote>
+<p>误将文章中的地址替换掉了</p>
+</blockquote>
+<h3 id="为什么要替换？">为什么要替换？</h3>
+<p>在自建反代建设好后，我第一时间换成了自己的。</br><br>
+但是，因为域名未备案的缘故，使用了海外主机，速度并不理想。</p>
+<h3 id="为什么没有发现错误">为什么没有发现错误</h3>
+<p>那一次错误的提交已经过去一个月了，但我始终没有发现错误。</br><br>
+主要是因为我已经摆烂一个月没有更新文章了，并没有仔细检测。</p>
+<div class="tip bell"><p>在这里，对发现该错误的网友表示感谢😅，并没有造成严重的后果。</p>
+</div>
+<p><img src="https://npm.elemecdn.com/yxlr-images@1.1.1/yxlr.62dkuzy7qo40.jpg" alt="评论区"></p>
+<h2 id="怎么做">怎么做</h2>
+<blockquote>
+<p>关于此事件的未来计划</p>
+</blockquote>
+<h3 id="关于博客">关于博客</h3>
+<p>我决定，不在摆烂，继续更新文章！</br><br>
+同时，欢迎大家指出错误，共同进步。</p>
+<h3 id="关于CDN">关于CDN</h3>
+<p>我非常感谢有Tianli提供的公益项目。</p>
+<p>我个人非常赞同这种公益精神。</p>
+]]></content>
+      <categories>
+        <category>博客黑历史</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>黑历史</tag>
       </tags>
   </entry>
   <entry>
@@ -867,25 +909,6 @@ RewriteRule . &#x2F;index.php [L]</code></pre>
         <tag>php</tag>
         <tag>jsdelivr</tag>
         <tag>加速</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于&quot;jsd反代&quot;文章出错的回应</title>
-    <url>/post/757da5d4.html</url>
-    <content><![CDATA[<h2 id="文章出错情况">文章出错情况</h2>
-<p>在本博客的&quot;<a href="https://www.yxlr.tk/post/7db9c141.html">自建jsdelivr反代服务</a>&quot;一文中，自建代理地址误写为<strong>Tianli</strong><br>
-搭建的服务<a href="cdn1.tianli0.top">地址</a></p>
-<p>现已改为正确的<a href="https://jsd.yxlr.tk">https://jsd.yxlr.tk</a></p>
-<h2 id="出错原因">出错原因</h2>
-<blockquote>
-<p>为什么会出错？</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
 </search>

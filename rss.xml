@@ -9,7 +9,7 @@
     <atom:link href="https://yxlr.tk/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description>分享与收获</description>
-    <pubDate>Sun, 11 Dec 2022 05:43:36 GMT</pubDate>
+    <pubDate>Sun, 11 Dec 2022 06:15:42 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -23,10 +23,12 @@
       
       
       
-      <category domain="https://yxlr.tk/categories/%E5%8D%9A%E5%AE%A2/">博客</category>
+      <category domain="https://yxlr.tk/categories/%E5%8D%9A%E5%AE%A2%E9%BB%91%E5%8E%86%E5%8F%B2/">博客黑历史</category>
       
       
       <category domain="https://yxlr.tk/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
+      
+      <category domain="https://yxlr.tk/tags/%E9%BB%91%E5%8E%86%E5%8F%B2/">黑历史</category>
       
       
       <comments>https://yxlr.tk/post/757da5d4.html#disqus_thread</comments>
@@ -145,9 +147,9 @@
       <category domain="https://yxlr.tk/categories/%E6%95%99%E7%A8%8B/">教程</category>
       
       
-      <category domain="https://yxlr.tk/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
-      
       <category domain="https://yxlr.tk/tags/%E6%95%99%E7%A8%8B/">教程</category>
+      
+      <category domain="https://yxlr.tk/tags/%E5%8D%9A%E5%AE%A2/">博客</category>
       
       <category domain="https://yxlr.tk/tags/%E5%BB%BA%E7%AB%99/">建站</category>
       
