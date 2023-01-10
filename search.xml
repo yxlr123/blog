@@ -502,7 +502,7 @@ pretty_urls:
     <content><![CDATA[<h2 id="前言">前言</h2>
 <p>最近因为一些原因，我没法折腾电脑了。<br>
 但我怎么能闲着呢，于是我准备对手机下手。<br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.3t1cwfsq6o00.webp" alt="Termux"><br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/xxx.3t1cwfsq6o00.webp" alt="Termux"><br>
 折腾安卓，当然要用<code>Termux</code>了，因为它有丰富的软件包。<br>
 Termux的下载地址： <a href="https://f-droid.org/en/packages/com.termux/">传送门</a></p>
 <hr>
@@ -520,12 +520,12 @@ apt update &amp;&amp; apt upgrade</code></pre>
 <p>全程<code>y</code>回车即可</p>
 </blockquote>
 <p>如果你需要更换其它源，可以执行<code>termux-change-repo</code>，然后使用自带方向键选择你需要更换的软件源。同样全程<code>y</code>回车即可。<br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.gdiqdmw8few.webp" alt="更换软件源"></p>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/xxx.gdiqdmw8few.webp" alt="更换软件源"></p>
 <hr>
 <h2 id="2-安装code-server失败">2.安装code-server<em>失败</em></h2>
 <p>因为要做python开发，<s>如果使用<code>vim</code>来编写，属实是有些蛋疼。</s><br>
 我想起了以前在服务器上使用<code>code-server</code>是多么的爽，完美解决了没有图形化界面的痛。<br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/xxx.yjtai7jp1sw.webp" alt="code-server"><br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/xxx.yjtai7jp1sw.webp" alt="code-server"><br>
 先安装<code>nodejs</code>(<code>pkg install nodejs</code>)，然后运行安装脚本，结果报错了！ 真让人头疼。</br><br>
 之后又尝试了使用<code>npm</code>安装，结果可想而知，还是报错(<em>≧ｍ≦</em>) </br><br>
 安装<code>code-server</code>失败，我分析了以下两种原因：</p>
@@ -557,13 +557,13 @@ sudo apt install nodejs</code></pre>
 <pre class="language-none"><code class="language-none">curl -fsSL https:&#x2F;&#x2F;code-server.dev&#x2F;install.sh | sh -s -- --dry-run # 安装
 code-server # 启动</code></pre>
 <p>终于成功了<br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.3eww1rc64f60.webp" alt=""><br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/yxlr.3eww1rc64f60.webp" alt=""><br>
 先按<kbd>Ctrl</kbd>+<kbd>c</kbd>关闭。<br>
 <code>vim ~/.config/code-server/config.yaml</code><br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.5xufa6xsr6k0.webp" alt=""><br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/yxlr.5xufa6xsr6k0.webp" alt=""><br>
 更改密码，再按<kbd>ESC</kbd>键输入<code>:wq</code>保存。<br>
-再次启动<code>code-server</code>，使用浏览器打开对应的地址<img class="inline-img" src="https://npm.elemecdn.com/yxlr-images@latest/xxx.745yhnn2rm80.webp" style="height:50px"/>，输入设置的密码，就可以开始使用了。<br>
-<img src="https://npm.elemecdn.com/yxlr-images@latest/yxlr.1gnxv8a3v5r4.webp" alt=""></p>
+再次启动<code>code-server</code>，使用浏览器打开对应的地址<img class="inline-img" src="https://npm.elemecdn.com/yxlr-images@1.1.0/xxx.745yhnn2rm80.webp" style="height:50px"/>，输入设置的密码，就可以开始使用了。<br>
+<img src="https://npm.elemecdn.com/yxlr-images@1.1.0/yxlr.1gnxv8a3v5r4.webp" alt=""></p>
 ]]></content>
       <categories>
         <category>折腾记录</category>
